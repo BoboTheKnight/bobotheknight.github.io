@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: post
 title: "单节点 ElasticSearch 及 Kibana 安装说明"
-permalink: /es-kibana-single-node-install
+date: 2021-12-02 18:13:59 +0800
+categories: ops
 ---
 
 # 单节点 ElasticSearch 及 Kibana 安装说明
