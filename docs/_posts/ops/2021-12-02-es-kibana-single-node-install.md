@@ -5,11 +5,10 @@ date: 2021-12-02 18:13:59 +0800
 categories: ops
 ---
 
-# 单节点 ElasticSearch 及 Kibana 安装说明
 ## 概述
 &ensp;&ensp;&ensp;&ensp;为了支持新功能，我们新增了ES节点。 可以根据数据情况和状态，配置ES为单节点或集群; 开启Xpack, 启用权限认证(需要安装Kibana)。
 官方文档 Set up Elasticsearch 有各个 OS 的安装指导，[Installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.3/install-elasticsearch.html) 页面中提供了多种安装包对应的指导链接，可以参考。本文档为在单节点linux服务器上安装ES及Kibana的说明文档。
-
+---
 ## 安装ES
 1. 首先确认环境中有JDK。 Elasticsearch 7.x 包里自包含了 OpenJDK11 的包，如果需要用自己的版本，参考[官方文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html)设置 JAVA_HOME 环境变量。
 
@@ -97,7 +96,7 @@ categories: ops
     即为成功！
     再尝试通过浏览器访问http://${ip}:9200/有相同的响应成功结果。  若无法访问，则检查防火墙。
 
-
+---
 ## 安装Kibana
 1. 安装步骤可参考[官方网站](https://www.elastic.co/guide/en/kibana/current/targz.html)；或按以下步骤执行
 
@@ -129,7 +128,7 @@ categories: ops
     Kibana is now available
     ```
     可通过浏览器访问 http://ip:5601
-    
+---
 ## 配置权限(使用用户名和密码身份验证运行本地集群)
 1. 可以参考官网[最低安全性设置](https://www.elastic.co/guide/en/elasticsearch/reference/7.14/security-minimal-setup.html)
 
@@ -168,7 +167,7 @@ categories: ops
     ```
     ./bin/kibana
     ```
-
+---
 ## 附录
 1.  解决ES启动报错问题
     1. 参考 [How to disable geoip usage in 7.14.0](https://discuss.elastic.co/t/how-to-disable-geoip-usage-in-7-14-0/281076)
