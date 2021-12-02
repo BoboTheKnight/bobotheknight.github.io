@@ -121,13 +121,13 @@ categories: ops
 4. 进入/bin 目录启动
     ```
     cd ../bin
-   ./kibana
+    ./kibana
     ```
     界面会打印日志，最后出现如下所示内容，即为成功！
     ```
     Kibana is now available
     ```
-    可通过浏览器访问 http://ip:5601
+    可通过浏览器访问 ```http://ip:5601```
 ---
 ## 配置权限(使用用户名和密码身份验证运行本地集群)
 1. 可以参考官网[最低安全性设置](https://www.elastic.co/guide/en/elasticsearch/reference/7.14/security-minimal-setup.html)
