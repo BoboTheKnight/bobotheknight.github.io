@@ -7,11 +7,12 @@ categories: ops
 
 # 单节点 ElasticSearch 及 Kibana 安装说明
 ## 概述
-&ensp;&ensp;&ensp;&ensp;为了支持新功能，我们新增了ES节点。 可以根据数据情况和状态，配置ES为单节点或集群; 开启Xpack, 启用权限认证(需要安装Kibana)。 
-&ensp;&ensp;&ensp;&ensp;官方文档 Set up Elasticsearch 有各个 OS 的安装指导，[Installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.3/install-elasticsearch.html) 页面中提供了多种安装包对应的指导链接，可以参考。本文档为在单节点linux服务器上安装ES及Kibana的说明文档。
+&ensp;&ensp;&ensp;&ensp;为了支持新功能，我们新增了ES节点。 可以根据数据情况和状态，配置ES为单节点或集群; 开启Xpack, 启用权限认证(需要安装Kibana)。
+官方文档 Set up Elasticsearch 有各个 OS 的安装指导，[Installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.3/install-elasticsearch.html) 页面中提供了多种安装包对应的指导链接，可以参考。本文档为在单节点linux服务器上安装ES及Kibana的说明文档。
 
 ## 安装ES
 1. 首先确认环境中有JDK。 Elasticsearch 7.x 包里自包含了 OpenJDK11 的包，如果需要用自己的版本，参考[官方文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html)设置 JAVA_HOME 环境变量。
+
 2. 创建ES专用用户，因为无法使用*root*用户启动：
     ```
     useradd elasticsearch
@@ -48,10 +49,12 @@ categories: ops
    ````
    
 6. 把9200和9300端口开放，或者关闭防火墙
+
 7. 根据配置文件，创建data目录存储es数据
    ```
    mkdir data
    ```
+   
 8. 给ES用户所有ES相关的权限；切换到*elasticsearch*用户；在bin目录下启动ES
     ``` 
     chown -R elasticsearch:elasticsearch ./*
@@ -97,10 +100,12 @@ categories: ops
 
 ## 安装Kibana
 1. 安装步骤可参考[官方网站](https://www.elastic.co/guide/en/kibana/current/targz.html)；或按以下步骤执行
+
 2. 使用*root*用户，上传压缩包内的**kibana-7.14.0-linux-x86_64.tar.gz**并解压。
     ```
     tar -zxvf kibana-7.14.0-linux-x86_64.tar.gz
     ```
+   
 3. 进入目录备份配置文件**kibana.yml**，而后修改
     ```
     cd kibana-7.14.0-linux-x86_64/config/
@@ -113,6 +118,7 @@ categories: ops
     elasticsearch.username: "kibana_system"
     ------------------------------
     ```
+   
 4. 进入/bin 目录启动
     ```
     cd ../bin
@@ -126,7 +132,9 @@ categories: ops
     
 ## 配置权限(使用用户名和密码身份验证运行本地集群)
 1. 可以参考官网[最低安全性设置](https://www.elastic.co/guide/en/elasticsearch/reference/7.14/security-minimal-setup.html)
+
 2. 停止 Kibana 和 Elasticsearch（如果它们正在运行）
+
 3. 将 xpack.security.enabled 设置添加到**$ES_PATH_CONF/elasticsearch.yml**文件并将值设置为true
    ```
     cd /home/es/elasticsearch-7.14.0/config
@@ -136,6 +144,7 @@ categories: ops
    ----------------------
    ```
    *tips:该$ES_PATH_CONF变量是 Elasticsearch 配置文件的路径。如果您使用存档分发版（zip或tar.gz）安装了 Elasticsearch ，则该变量默认为$ES_HOME/config. 如果您使用软件包发行版（Debian 或 RPM），则该变量默认为/etc/elasticsearch.*
+
 4. 启动ES，等待启动成功
    ```
    cd ../bin
@@ -146,6 +155,7 @@ categories: ops
     ./bin/elasticsearch-setup-passwords interactive
     ```
     执行后根据命令行提示配置密码
+
 6. 配置 Kibana 以使用密码连接到 Elasticsearch ，创建 Kibana 密钥库并添加安全设置：
     ```
     cd kibana-7.14.0-linux-x86_64/
@@ -153,6 +163,7 @@ categories: ops
      ./bin/kibana-keystore add elasticsearch.password
     ```
     出现提示时，输入*kibana_system*用户的密码。
+
 7. 重启 Kibana,并在浏览器 “http://${kibanaIp}:5601” 以*elastic*用户身份登录 Kibana 。
     ```
     ./bin/kibana
