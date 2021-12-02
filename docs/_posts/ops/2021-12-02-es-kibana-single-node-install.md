@@ -167,7 +167,7 @@ categories: ops
     ```
     ./bin/kibana
     ```
----
+--- 
 ## 附录
 1.  解决ES启动报错问题
     1. 参考 [How to disable geoip usage in 7.14.0](https://discuss.elastic.co/t/how-to-disable-geoip-usage-in-7-14-0/281076)
