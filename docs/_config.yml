@@ -28,8 +28,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  BoboTheKnight
 
 # Build settings
-# theme: minima
-theme: jekyll-theme-leap-day
+theme: minima
+# theme: jekyll-theme-leap-day
 plugins:
   - jekyll-feed
 
