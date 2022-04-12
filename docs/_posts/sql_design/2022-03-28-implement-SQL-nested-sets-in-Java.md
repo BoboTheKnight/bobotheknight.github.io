@@ -236,7 +236,6 @@ public class NestedSetsUtil {
     /**
      *  文件嵌套集对象，业务无关  
      */
-   @Data
    public static class NestedSetObj {
         private long left;
         private long right;
@@ -260,7 +259,6 @@ WHERE  node.depth = parent.depth + 1
     AND node.tree_id = 1  
     AND parent.path = '\resources\mapper'
     AND node.type = 'FILE'
-
 ORDER BY parent.left_index
 ```
 
@@ -275,6 +273,7 @@ ORDER BY node.left_index
 ### 扩展查询语句
 
 * 检索单个路径下的直接子节点
+
 ```sql
 SELECT node.*
 FROM file_nested_sets_demo AS node,
@@ -287,4 +286,6 @@ WHERE node.depth = parent.depth + 1
 ORDER BY parent.left_index
 ```
 
-   
+---
+# Note
+可以执行的Java算法见 [github](https://github.com/BoboTheKnight/NestedSetDemo)
