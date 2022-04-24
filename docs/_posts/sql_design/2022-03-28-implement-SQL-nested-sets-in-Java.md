@@ -2,7 +2,7 @@
 layout: post
 title: "用Java实现SQL的嵌套集设计 Nested Set Modified Preorder Tree Traversal"
 date: 2022-03-28 22:15:03 +0800
-categories: ops
+categories: sql_design
 ---
 
 ## 前言
@@ -20,7 +20,7 @@ categories: ops
 [(译文1)](http://www.snowpeak.org/cn/article/detail/further_discussion_on_managing_hierarchical_data_with_nested_set_model/)
 [(译文2)](https://developer.aliyun.com/article/50149#slide-0)
 很适合这样的场景。
-（如果项目中用到了图数据库，图数据库是复杂层次数据的理想选择。）
+（如果项目中用到了图数据库，图数据库是处理复杂层次数据更好的选择。）
 
 互联网上很难找到使用Java实现的现成代码，只在github上找到一个[项目](https://github.com/eXsio/nestedj)实现了一部分功能。但此项目不支持MyBatis，我不计划采用，因此只能自己实现嵌套集设计。
 
