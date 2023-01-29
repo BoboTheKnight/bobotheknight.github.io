@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-So far, it's not about anything.
+Specialization in enterprise-grade distributed systems from 2018. Main programming language is Java.
