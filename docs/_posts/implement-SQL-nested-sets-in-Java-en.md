@@ -4,7 +4,7 @@ title: "Nested Set Modified Preorder Tree Traversal Realizing SQL Nested Set Des
 date: 2023-01-29 00:10:10 -0500
 categories: sql_design
 ---
-[简体中文](2022-03-28-implement-SQL-nested-sets-in-Java-zh.md)
+[简体中文](implement-SQL-nested-sets-in-Java-zh.md)
 
 ## Previous
 最近有一个目录文件入库的需求，条件是：
@@ -18,8 +18,6 @@ categories: sql_design
 
 经过[调研](https://stackoverflow.com/questions/4048151/what-are-the-options-for-storing-hierarchical-data-in-a-relational-database)，
 发现[嵌套集设计](http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/)
-[(译文1)](http://www.snowpeak.org/cn/article/detail/further_discussion_on_managing_hierarchical_data_with_nested_set_model/)
-[(译文2)](https://developer.aliyun.com/article/50149#slide-0)
 很适合这样的场景。
 （如果项目中用到了图数据库，图数据库是处理复杂层次数据更好的选择。）
 
@@ -30,8 +28,8 @@ categories: sql_design
 本文示例使用 `MySQL 8.0`、`JDK 8`
 
 ---
-## 嵌套集模型
-在面对分层结构数据存储时，例如目录，![目录存储](resources/nested_set/nested_set_tree_directory.png)
+## Nested Set Model
+在面对分层结构数据存储时，例如目录，![目录存储](../../resources/nested_set/nested_set_tree_directory.png)
 
 我们往往采用被称为**邻接表模型**的方案，表字段设计大约是：
 ```
@@ -45,10 +43,10 @@ id, name, parentId
 id, name, left_index, right_index, depth
 ```
 也就是把各个节点看做一个个容器，子节点在父节点内部，所有节点都在根节点中；用图片表示如下：
-![嵌套集示例](resources/nested_set/nested_set_model.png)
+![嵌套集示例](../../resources/nested_set/nested_set_model.png)
 
 再自左向右编号，每个容器都有左右两个编号，即为left与right; 用图片表示如下：
-![嵌套集-数字表示](resources/nested_set/nested_set_1_number.png)
+![嵌套集-数字表示](../../resources/nested_set/nested_set_1_number.png)
 
 为了方便查询下一级节点和其他节点，可以增加一个depth字段，用来表示深度。
 至此，可以得到每个节点的左右值。

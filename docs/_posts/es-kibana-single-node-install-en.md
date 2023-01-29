@@ -1,55 +1,54 @@
 ---
 layout: post
-title: "单节点 ElasticSearch 及 Kibana 安装说明"
-date: 2021-12-02 18:13:59 +0800
+title: "Single Node ElasticSearch and Kibana Installation Instructions"
+date: 2023-01-29 00:10:10 -0500
 categories: ops
 ---
 
-[English](2021-12-02-es-kibana-single-node-install-zh.md)
+[简体中文](es-kibana-single-node-install-zh.md)
 
-## 概述
-&ensp;&ensp;&ensp;&ensp;为了支持新功能，我们新增了ES节点。 可以根据数据情况和状态，配置ES为单节点或集群; 开启Xpack, 启用权限认证(需要安装Kibana)。
-官方文档 Set up Elasticsearch 有各个 OS 的安装指导，[Installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.3/install-elasticsearch.html) 页面中提供了多种安装包对应的指导链接，可以参考。本文档为在单节点linux服务器上安装ES及Kibana的说明文档。
+## Summary
+&ensp;&ensp;&ensp;&ensp;To support the new features, we have added ES nodes. You can configure ES as a single node or cluster depending on the data situation and status; enable Xpack, enable permission authentication (requires Kibana installation).
+The official documentation Set up Elasticsearch has installation instructions for each OS, [Installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.3/install-elasticsearch.html) page provides links to instructions for various installation packages, which can be consulted. This document provides instructions for installing ES and Kibana on a single-node Linux server.
 ---
-## 安装ES
-1. 首先确认环境中有JDK。 Elasticsearch 7.x 包里自包含了 OpenJDK11 的包，如果需要用自己的版本，参考[官方文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html)设置 JAVA_HOME 环境变量。
+## Setup ES
+1. First make sure you have a JDK in your environment. Elasticsearch 7.x package includes the OpenJDK11 package, if you need to use your own version, refer to the [official documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html) to set the JAVA_HOME environment variable.
 
-2. 创建ES专用用户，因为无法使用*root*用户启动：
+2. Create an ES-specific user, as it is not possible to start with *root* user.
     ```
     useradd elasticsearch
     ```
-   创建ES程序目录，并给*elasticsearch*用户赋权限：
+   Create the ES directory and grant permissions to the *elasticsearch* user.
    ```
    cd /home
    mkdir /es
    chown -R elasticsearch:elasticsearch /home/es/
    ```
 
-3. 上传压缩包内的**elasticsearch-7.14.0-linux-x86_64.tar.gz**，也可去官网下载或使用其他方式下载。
-   [官网下载地址](https://www.elastic.co/cn/downloads/elasticsearch),   [国内镜像下载地址](http://dl.elasticsearch.cn/elasticsearch/)
+3. Upload **elasticsearch-7.14.0-linux-x86_64.tar.gz** in the zip archive, or you can go to the [official website](https://www.elastic.co/cn/downloads/elasticsearch) to download it or use other methods to download it.
 
-4. 解压
+4. Unpacked
    ```
    tar -zxvf elasticsearch-7.14.0-linux-x86_64.tar.gz
    ```
 
-5. 修改配置文件，进入解压后的目录 
+5. Modify the configuration file and go to the unpacked directory
    ``` 
    cd elasticsearch-7.14.0/config
    ```
-   首先备份配置文件**elasticsearch.yml**，而后修改
+   First backup the configuration file **elasticsearch.yml**, and then modify
    ````
    cp elasticsearch.yml elasticsearch.yml.bak 
    vim elasticsearch.yml
    ------------------------------
-   network.host: ${该服务器的ip}
+   network.host: ${ip of this server}
    http.port: 9200
-   discovery.seed_hosts: ["${该服务器的ip}"]
-   discovery.type: single-node # 单节点模式
+   discovery.seed_hosts: ["${ip of this server}"]
+   discovery.type: single-node # single-node mode
    ------------------------------
    ````
    
-6. 把9200和9300端口开放，或者关闭防火墙
+6. Open ports of 9200 and 9300, or turn off the firewall.
 
 7. 根据配置文件，创建data目录存储es数据
    ```

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "Single Node ElasticSearch and Kibana Installation Instructions"
-date: 2023-01-29 00:10:10 -0500
+title: "单节点 ElasticSearch 及 Kibana 安装说明"
+date: 2021-12-02 18:13:59 +0800
 categories: ops
 ---
 
-[简体中文](2021-12-02-es-kibana-single-node-install-zh.md)
+[English](es-kibana-single-node-install-zh.md)
 
-## Summary
-&ensp;&ensp;&ensp;&ensp;In order to support new features, we have added ES nodes. ES can be configured as a single node or a cluster according to the data situation and status; Xpack is enabled, and authorization authentication is enabled (Kibana needs to be installed).
-The official document Set up Elasticsearch has installation instructions for each OS,[Installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.3/install-elasticsearch.html) 页面中提供了多种安装包对应的指导链接，可以参考。本文档为在单节点linux服务器上安装ES及Kibana的说明文档。
+## 概述
+&ensp;&ensp;&ensp;&ensp;为了支持新功能，我们新增了ES节点。 可以根据数据情况和状态，配置ES为单节点或集群; 开启Xpack, 启用权限认证(需要安装Kibana)。
+官方文档 Set up Elasticsearch 有各个 OS 的安装指导，[Installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.3/install-elasticsearch.html) 页面中提供了多种安装包对应的指导链接，可以参考。本文档为在单节点linux服务器上安装ES及Kibana的说明文档。
 ---
-## Setup ES
+## 安装ES
 1. 首先确认环境中有JDK。 Elasticsearch 7.x 包里自包含了 OpenJDK11 的包，如果需要用自己的版本，参考[官方文档](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html)设置 JAVA_HOME 环境变量。
 
 2. 创建ES专用用户，因为无法使用*root*用户启动：
