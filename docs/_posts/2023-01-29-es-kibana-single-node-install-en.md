@@ -5,7 +5,7 @@ date: 2023-01-29 00:10:10 -0500
 categories: ops
 ---
 
-[简体中文](es-kibana-single-node-install-zh.md)
+[简体中文](https://bobotheknight.github.io/docs/ops/2021/12/02/es-kibana-single-node-install-zh.html)
 
 ## Summary
 &ensp;&ensp;&ensp;&ensp;To support the new features, we have added ES nodes. You can configure ES as a single node or cluster depending on the data situation and status; enable Xpack, enable permission authentication (requires Kibana installation).

@@ -5,7 +5,7 @@ date: 2021-12-02 18:13:59 +0800
 categories: ops
 ---
 
-[English](es-kibana-single-node-install-zh.md)
+[English](https://bobotheknight.github.io/docs/ops/2023/01/29/es-kibana-single-node-install-en.html)
 
 ## 概述
 &ensp;&ensp;&ensp;&ensp;为了支持新功能，我们新增了ES节点。 可以根据数据情况和状态，配置ES为单节点或集群; 开启Xpack, 启用权限认证(需要安装Kibana)。

@@ -4,7 +4,7 @@ title: "Nested Set Modified Preorder Tree Traversal Realizing SQL Nested Set Des
 date: 2023-01-29 00:10:10 -0500
 categories: sql_design
 ---
-[简体中文](implement-SQL-nested-sets-in-Java-zh.md)
+[简体中文](https://bobotheknight.github.io/docs/sql_design/2022/03/28/implement-SQL-nested-sets-in-Java-zh.html)
 
 ## Previous
 最近有一个目录文件入库的需求，条件是：

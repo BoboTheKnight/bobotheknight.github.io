@@ -4,7 +4,7 @@ title: "用Java实现SQL的嵌套集设计 Nested Set Modified Preorder Tree Tra
 date: 2022-03-28 22:15:03 +0800
 categories: sql_design
 ---
-[English](implement-SQL-nested-sets-in-Java-en.md)
+[English](https://bobotheknight.github.io/docs/sql_design/2023/01/29/implement-SQL-nested-sets-in-Java-en.html)
 
 
 ## 前言
