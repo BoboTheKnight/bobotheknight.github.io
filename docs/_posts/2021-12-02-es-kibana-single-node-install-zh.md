@@ -4,8 +4,8 @@ title: "单节点 ElasticSearch 及 Kibana 安装说明"
 date: 2021-12-02 18:13:59 +0800
 categories: ops
 ---
-<div style="text-align: right">  </div> 
-[English](../../../en/ops/2021-12-02-es-kibana-single-node-install.md)
+
+[English](2021-12-02-es-kibana-single-node-install-zh.md)
 
 ## 概述
 &ensp;&ensp;&ensp;&ensp;为了支持新功能，我们新增了ES节点。 可以根据数据情况和状态，配置ES为单节点或集群; 开启Xpack, 启用权限认证(需要安装Kibana)。

@@ -1,3 +1,5 @@
 https://bobotheknight.github.io/
-https://bobotheknight.github.io/docs/cn/ops/2021/12/02/es-kibana-single-node-install.html
-https://bobotheknight.github.io/docs/cn/sql_design/2022/03/28/implement-SQL-nested-sets-in-Java.html
+https://bobotheknight.github.io/docs/2021/12/02/es-kibana-single-node-install-zh.html
+https://bobotheknight.github.io/docs/2021/12/02/es-kibana-single-node-install-en.html
+https://bobotheknight.github.io/docs/2022/03/28/implement-SQL-nested-sets-in-Java-zh.html
+https://bobotheknight.github.io/docs/2022/03/28/implement-SQL-nested-sets-in-Java-en.html
