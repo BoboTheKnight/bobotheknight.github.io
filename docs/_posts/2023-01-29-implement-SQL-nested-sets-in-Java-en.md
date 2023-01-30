@@ -7,14 +7,14 @@ categories: sql_design
 [简体中文](https://bobotheknight.github.io/docs/sql_design/2022/03/28/implement-SQL-nested-sets-in-Java-zh.html)
 
 ## Previous
-最近有一个目录文件入库的需求，条件是：
-1. 入参是解压后的文件夹路径； 
-2. 解压后的文件不存在变更及更新的情况。
+Recently, we got a requirement for storage directories and files，the condition is,
+1. Input parameter is the path of the root directory which was unpacked. 
+2. The files will not change nor update after unpacked.
 
-需求详情是：
-1. 文件夹及其所有子目录和子文件，都需要解析成树结构响应给前端；
-2. 需要在点击每一级目录时，都拿到这个目录下所有文件（包括子目录下的文件）进行一些业务数据的统计；
-3. 只能使用关系型数据库MySQL。
+The details of the requirement is,
+1. The directories and all its subdirectories and sub-files need to be parsed into a tree structure response to the front end.
+2. When the user clicks on each level of directory, we need to get the files in this directory and all its subdirectories for some business data statistics.
+3. We can only use the MySQL.(Can't use a graph database.)
 
 经过[调研](https://stackoverflow.com/questions/4048151/what-are-the-options-for-storing-hierarchical-data-in-a-relational-database)，
 发现[嵌套集设计](http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/)
@@ -29,7 +29,7 @@ categories: sql_design
 
 ---
 ## Nested Set Model
-在面对分层结构数据存储时，例如目录，![目录存储](../../resources/nested_set/nested_set_tree_directory.png)
+在面对分层结构数据存储时，例如目录，![目录存储](../../../resources/nested_set/nested_set_tree_directory.png)
 
 我们往往采用被称为**邻接表模型**的方案，表字段设计大约是：
 ```
@@ -43,10 +43,10 @@ id, name, parentId
 id, name, left_index, right_index, depth
 ```
 也就是把各个节点看做一个个容器，子节点在父节点内部，所有节点都在根节点中；用图片表示如下：
-![嵌套集示例](../../resources/nested_set/nested_set_model.png)
+![嵌套集示例](../../../../resources/nested_set/nested_set_model.png)
 
 再自左向右编号，每个容器都有左右两个编号，即为left与right; 用图片表示如下：
-![嵌套集-数字表示](../../resources/nested_set/nested_set_1_number.png)
+![嵌套集-数字表示](../../../../../resources/nested_set/nested_set_1_number.png)
 
 为了方便查询下一级节点和其他节点，可以增加一个depth字段，用来表示深度。
 至此，可以得到每个节点的左右值。
