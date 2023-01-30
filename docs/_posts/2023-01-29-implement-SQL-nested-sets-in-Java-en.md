@@ -29,7 +29,7 @@ The details of the requirement is,
 
 ---
 ## Nested Set Model
-在面对分层结构数据存储时，例如目录，![目录存储](../../../resources/nested_set/nested_set_tree_directory.png)
+在面对分层结构数据存储时，例如目录，![目录存储](../../../../../resources/nested_set/nested_set_tree_directory.png)
 
 我们往往采用被称为**邻接表模型**的方案，表字段设计大约是：
 ```
@@ -43,7 +43,7 @@ id, name, parentId
 id, name, left_index, right_index, depth
 ```
 也就是把各个节点看做一个个容器，子节点在父节点内部，所有节点都在根节点中；用图片表示如下：
-![嵌套集示例](../../../../resources/nested_set/nested_set_model.png)
+![嵌套集示例](../../../../../resources/nested_set/nested_set_model.png)
 
 再自左向右编号，每个容器都有左右两个编号，即为left与right; 用图片表示如下：
 ![嵌套集-数字表示](../../../../../resources/nested_set/nested_set_1_number.png)
