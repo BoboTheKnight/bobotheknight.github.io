@@ -18,7 +18,7 @@
 16. Design Pattern
 17. REST APIs
 
-Others 
+Others
 CI CD
 #### What is the role of continuous integration systems in the automated-build process?
 The interviewer is asking this question to make sure you understand what continuous integration systems are and how they are used in the automated build process. When answering this question, clearly define what continuous integration is and then explain how it is used in the automated build process.

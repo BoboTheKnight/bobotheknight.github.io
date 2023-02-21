@@ -58,14 +58,20 @@ forcus on Backend Development.
 <br> **3. First is for shopping mall, to collect bills and sales.**
 <br> **4. Second is focus on cyber-security.**
 <br> **5. A sense of accomplishment is really important for me.**
-<br> **6. I’m willing to go the extra mile for it.**
+<br> **6. I'm willing to go the extra mile for it.**
 
-<br>I have four years of experience in software development in Beijing. I've built very different platforms and I'm open
-to building more different types of software. I worked in two companies.
-<br>At the first one, I built and maintained some platforms for large shopping malls. We use our hardware to collect the
-bills and daily sales. And we offered some suggestions for them base on these data.
-<br>My second employer focus on cyber-security. My team developed a product for development security, our clients mainly
-are bank, insurance and financial companies.
+<br>I have four years of experience in software development in Beijing. I've built various platforms, and I'm
+open to building different types of software. I worked at two companies.
+<br>The first one, I built and maintained platforms for large shopping malls. We collected bills, made
+statistics on the data and provided customers with business suggestions. My greatest
+achievement there was that I developed strong problem-solving ability and learned the skills of cross-departmental
+collaboration.
+<br>My second employer focused on cyber-security. The team I was working with developed a product for development
+security
+and our customers were mainly banking, insurance and financial companies. There, I had more opportunities to solve more
+challenging technical problems, and I also achieved results beyond expectations.
+
+<br>
 <br>As time passed, I realized that a sense of accomplishment is very important to me. During the last few months of my
 first job, my team was working on a new platform. At first, it was a really exciting project, and my boss told us it is
 very important for company. We even gave up our vacation to overwork on it. However, when we were almost done, we were
@@ -137,7 +143,27 @@ I'm ready to do work in your company.
 
 ### 6. What was your specific role and responsibilities on the most recent project you worked on? | Tell me about the most recent project you worked on. What were your responsibilities? <a name="6"/>
 
+In the most recently project, my colleagues and I developed for our main project's new requirement. It is a security
+platform.
+In the version upgrade iteration process, I need to participate in requirements review meeting with produce manager and
+other engineers to understand requirements' details.
+Then I will participate in development meeting to discuss a basic implementation and assess workload and assign tasks.
+The primary part is development. We need to follow rules to create or pull a right branch, and start development.
+Sometimes we need to investigate new technologies to fulfill specific needs.
+After development, first I check the program from myself. Then we mark the feature as complete. Then the QA(Quality
+assurance) engineer will check them.
+Finally, we work with our colleagues in the delivery group.
+
 ### 7. What is the project you are most proud of, and how did you contribute to it?<a name="7"/>
+
+The project I'm most proud of is the platform for analyzing source code components. I developed a lot of new requirements, optimized a number of old features and solved some problems. But most importantly, I solved several difficult problems, which gave me a great sense of accomplishment.<br>
+For example, we have a requirement from a big client. I had a lot of work to do.
+So I set priorities and got some small tasks done in a short time. Then I focused on the biggest and hardest task, storing source code data and mapping to the result file, then returning. <br>
+The hardest point was that the source code could be large, at least 2-3GB(Gigabyte) or even more than 20GB(Gigabyte). Also, we have to count the result data for the layers and each sub-layer. This means that the usual solution may not be good enough in this case, as it may take too much time to load, or even can not load at all.<br>
+So I started to find a better solution to this problem, and I succeed. This approach shows a new tree data storage structure, and it offered demos that can easily search for the results I needed. Usually, this would be the end of it. <br>
+But I ran into a really difficult problem, how to convert the data from the original structure to the new structure. At that time I was not very familiar with tree structures. So, I tried to find a ready answer, but this time I couldn't find it anymore. This is not a common way to save data, so I tried to write it myself. I started learning depth-first and breadth-first search for tree traversal in a tight time. When I got stuck, I talked to my leader and asked on StackOverflow to try to find some ideas. Even though I didn't get valid results from them, I finished it with DFS. This implementation worked well and was fast, staying under 90ms, even with large data.<br>
+Since this was a new way of doing things, I shared the solution with my team. I also made some comments in the code and provided some links to help other engineers who might need to maintain the code later.<br>
+A few weeks later, we needed to optimize an old function. For several years, no one has dared to update it easily, even if it is sometimes slow, because its structure is relatively complicated, and various problems may appear after the update. I refactored it with the same idea. Finally, the query performance improved by 99.5 percent.<br>
 
 ### 8. Do you prefer to work alone or on a team?<a name="8"/>
 
