@@ -1,4 +1,4 @@
-# A. Behavioral Questions
+# Behavioral Questions
 ------------------
 <!-- replace with <a name="."/> -->
 
