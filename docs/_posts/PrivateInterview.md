@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "PrivateInfo"
 date: 2023-02-14 00:10:10 -0500
 categories: private
