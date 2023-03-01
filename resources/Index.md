@@ -14,4 +14,4 @@
   * [D16. Design Pattern.md](for_interview%2FD16.%20Design%20Pattern.md)
 * [F. Do you have questions for this role.md](for_interview%2FF.%20Do%20you%20have%20questions%20for%20this%20role.md)
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=prepare.interview.index&left_color=green&right_color=white)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=prepare.interview.index&left_color=green&right_color=blue)
