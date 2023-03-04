@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-Specialization in enterprise-grade distributed systems from 2018. Main programming language is Java.
+Welcome to Bo Bo The Knight site!
