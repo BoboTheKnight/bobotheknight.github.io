@@ -1,5 +1,5 @@
-# Prepare Interview
-* [PrivateInterview.md](..%2Fdocs%2F_posts%2FPrivateInterview.md)
+# Prepare Interview2
+* [PrivateInterview.md](../_posts/PrivateInterview.md)
 * [0.Read it every day.md](for_interview%2F0.Read%20it%20every%20day.md)
 * [A. Behavioral Questions.md](for_interview%2FA.%20Behavioral%20Questions.md)
 * [B. Situational interview questions.md](for_interview%2FB.%20Situational%20interview%20questions.md)
