@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bobotheknight.github.io/about/index.html</loc>
+    
+    <lastmod>2023-07-06T03:05:49.310Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://bobotheknight.github.io/2023/01/29/2023-01-29-es-kibana-single-node-install-en/</loc>
     
-    <lastmod>2023-07-05T17:57:13.768Z</lastmod>
+    <lastmod>2023-07-05T23:32:09.915Z</lastmod>
     
   </url>
   
