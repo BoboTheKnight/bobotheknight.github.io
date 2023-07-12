@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bobotheknight.github.io/implement-SQL-nested-sets-in-Java-en/</loc>
+    
+    <lastmod>2023-07-12T20:28:53.475Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://bobotheknight.github.io/comment-policy/index.html</loc>
+    
+    <lastmod>2023-07-12T20:23:03.403Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://bobotheknight.github.io/about/index.html</loc>
     
     <lastmod>2023-07-12T19:15:18.897Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>https://bobotheknight.github.io/single-node-elasticsearch-and-kibana-installation-instructions-en/</loc>
     
     <lastmod>2023-07-12T19:15:14.651Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://bobotheknight.github.io/implement-SQL-nested-sets-in-Java-en/</loc>
-    
-    <lastmod>2023-07-12T19:15:14.645Z</lastmod>
     
   </url>
   
