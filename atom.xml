@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bobotheknight.github.io/"/>
-  <updated>2023-07-12T20:28:53.475Z</updated>
+  <updated>2023-07-12T20:34:34.518Z</updated>
   <id>https://bobotheknight.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>new_title</title>
+    <link href="https://bobotheknight.github.io/2023/07/12/new-title/new-title/"/>
+    <id>https://bobotheknight.github.io/2023/07/12/new-title/new-title/</id>
+    <published>2023-07-12T20:33:05.000Z</published>
+    <updated>2023-07-12T20:34:34.518Z</updated>
+    
+    <content type="html"><![CDATA[<p>test my picture</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;test my picture&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Implementation of nested set design of SQL with Java - Nested Set Modified Preorder Tree Traversal</title>
